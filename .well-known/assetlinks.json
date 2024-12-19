@@ -1,1 +1,8 @@
-
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "app.netlify.silly_baklava_5df0f3.twa",
+        "sha256_cert_fingerprints": ["19:DE:A8:19:E3:AC:D2:34:2D:A9:E4:AF:63:9C:80:67:15:0F:01:AD:E1:45:6D:18:45:3A:C0:D6:94:E7:0E:7E"]
+      }
+    }]
