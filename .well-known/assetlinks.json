@@ -2,7 +2,7 @@
       "relation": ["delegate_permission/common.handle_all_urls"],
       "target": {
         "namespace": "android_app",
-        "package_name": "app.netlify.silly_baklava_5df0f3.twa",
-        "sha256_cert_fingerprints": ["19:DE:A8:19:E3:AC:D2:34:2D:A9:E4:AF:63:9C:80:67:15:0F:01:AD:E1:45:6D:18:45:3A:C0:D6:94:E7:0E:7E"]
+        "package_name": "app.netlify.transkripce.twa",
+        "sha256_cert_fingerprints": ["88:50:F6:64:99:20:9D:5B:A3:70:E4:7B:DA:12:D3:80:6D:E7:DD:21:A3:BF:D4:90:2F:12:F9:DB:C3:45:FE:CA"]
       }
     }]
