@@ -3,6 +3,6 @@
       "target": {
         "namespace": "android_app",
         "package_name": "app.netlify.transkripce.twa",
-        "sha256_cert_fingerprints": ["88:50:F6:64:99:20:9D:5B:A3:70:E4:7B:DA:12:D3:80:6D:E7:DD:21:A3:BF:D4:90:2F:12:F9:DB:C3:45:FE:CA"]
+        "sha256_cert_fingerprints": ["F2:A1:C4:13:2A:E3:14:B9:BD:72:66:ED:4E:5A:1B:6B:DB:21:E1:60:D7:66:7C:97:71:96:BD:7F:FE:B9:F5:83"]
       }
     }]
