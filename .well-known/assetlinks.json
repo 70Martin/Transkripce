@@ -2,7 +2,7 @@
       "relation": ["delegate_permission/common.handle_all_urls"],
       "target": {
         "namespace": "android_app",
-        "package_name": "app.netlify.transkripce.twa",
-        "sha256_cert_fingerprints": ["02:1B:30:B6:87:7A:3F:FE:97:2B:11:BA:60:6E:B6:60:83:C1:7B:62:58:01:D8:E4:80:73:26:BD:F3:30:4F:B4"]
+        "package_name": "app.netlify.focusps.twa",
+        "sha256_cert_fingerprints": ["29:06:35:A9:AB:81:C0:64:6D:2B:B8:AF:A5:7B:3F:52:B5:7B:06:F1:79:09:93:60:5E:8B:FC:54:38:82:6F:94"]
       }
     }]
