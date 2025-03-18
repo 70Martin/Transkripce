@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Převod řeči na text online | FocusPS – hlasová transkripce a čísla</title>
+    <meta name="description" content="FocusPS je český nástroj pro online převod hlasu na text a automatickou detekci čísel. Využívá Web Speech API a podporuje tematické režimy. Vyzkoušej speech-to-text online.">
+    <meta name="keywords" content="převod řeči na text, diktování textu, rozpoznávání řeči, speech to text, hlasová transkripce, detekce čísel, Web Speech API, čeština, FocusPS">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HDJZCQT9GB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HDJZCQT9GB');
+    </script>
+</head>
+<body>
+    <div style="text-align: center; margin-bottom: 20px;">
+        <img id="logo" src="nfsoft_logo.png" alt="Logo NFsoft" style="max-width: 85px; height: auto;">
+    </div>
+
+    <h1>FocusPS – Převod řeči na text</h1>
+    <p style="text-align:center; max-width: 700px; margin: 0 auto 20px auto;">
+        FocusPS je jednoduchý a bezplatný online nástroj pro <strong>převod hlasu na text v češtině</strong> pomocí Web Speech API. 
+        V reálném čase provádí <strong>rozpoznávání řeči</strong>, <strong>diktování textu</strong> a <strong>automatickou detekci čísel</strong>. 
+        Vhodné pro tvorbu poznámek, přepis rozhovorů i rychlý zápis diktátu. Vyzkoušej <strong>speech-to-text online v češtině</strong> s možností exportu dat.
+    </p>
+
+    <div class="hidden">
+        FocusPS je jednoduchý a bezplatný online nástroj pro převod hlasu na text v češtině pomocí Web Speech API. 
+        V reálném čase provádí rozpoznávání řeči, diktování textu a automatickou detekci čísel. 
+        Vhodné pro tvorbu poznámek, přepis rozhovorů i rychlý zápis diktátu. Vyzkoušej speech-to-text online v češtině s možností exportu dat.
+    </div>
+
+    <button id="startStopButton" onclick="startStopRecording()">Začít nahrávat</button>
+
+    <h2>Textová transkripce</h2>
+    <div id="transcription" class="transcription" contenteditable="true"></div>
+
+    <h2>Detekovaná čísla</h2>
+    <div id="numbers" class="numbers"></div>
+
+    <button id="themeButton" onclick="changeTheme()">Změnit téma</button>
+    <button id="saveTextButton" onclick="saveTextToFile()">Uložit text</button>
+    <button id="saveCSVButton" onclick="saveNumbersToCSV()">Uložit čísla do CSV</button>
+
+    <input type="file" id="fileInput" onchange="loadFile(event)" />
+
+    <div id="navodIcon" onclick="toggleNavod()">ℹ️</div>
+    <div id="navodContainer">
+        <h3>Návod</h3>
+        <p><strong>1. Hlasová transkripce</strong><br>Převádí mluvené slovo na text v reálném čase pomocí Web Speech API. Podporuje češtinu (cs-CZ). Automaticky detekuje čísla v textu.</p>
+        <p><strong>2. Zpracování čísel</strong><br>Rozpoznaná čísla se zobrazují ve speciální sekci. Uživatel může čísla ručně upravovat přímo v políčkách.</p>
+        <p><strong>3. Tematické režimy</strong><br>Možnost přepínání mezi světlým, tmavým a modrým režimem zobrazení.</p>
+        <p><strong>4. Ukládání dat</strong><br>Uložit kompletní transkripci do TXT souboru (transcription.txt) nebo exportovat detekovaná čísla do CSV (numbers.csv).</p>
+        <p><strong>5. Načítání souborů</strong><br>Načti text ze souboru a zobraz ho s automatickou detekcí čísel.</p>
+        <p><strong>6. Dynamické zpracování textu</strong><br>Transkripce zahrnuje převod číslovek na číslice (např. „jedna“ na „1“). Podpora desetinných čísel s tečkou místo čárky.</p>
+        <p><strong>7. Přizpůsobení rozhraní</strong><br>Upozornění: Pro úpravu dat je třeba zastavit nahrávání a uložit změny.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
