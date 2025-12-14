@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusPS - Nástroj pro převedení řeči na text a detekci čísel</title>
+    <meta name="description" content="PWA aplikace FocusPS je jednoduchý a bezplatný online nástroj pro převod hlasu na text v češtině pomocí Web Speech API. V reálném čase provádí rozpoznávání řeči a detekci čísel.">
+    <meta name="keywords" content="hlasová transkripce, detekce čísel, Web Speech API, čeština, tematické režimy, FocusPS">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css"> <!-- Odkaz na externí CSS -->
+    <!-- Google tag (gtag.js) --> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HDJZCQT9GB"></script>
+    <script> 
+        window.dataLayer = window.dataLayer || []; 
+        function gtag(){dataLayer.push(arguments);} 
+        gtag('js', new Date()); 
+        gtag('config', 'G-HDJZCQT9GB'); 
+    </script>
+    <!-- SheetJS knihovna pro Excel export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div style="text-align: center; margin-bottom: 20px;">
+        <img id="logo" src="icons/nfsoft_logo.png" alt="Logo NFsoft" style="max-width: 85px; height: auto;">
+    </div>
+    
+    <h1>FocusPS</h1>
+    <button id="startStopButton" onclick="startStopRecording()">Začít nahrávat</button>
+
+    <h2>Textová transkripce</h2>
+    <div id="transcription" class="transcription" contenteditable="true"></div>
+
+    <h2>Detekovaná čísla</h2>
+    <div id="numbers" class="numbers"></div>
+
+    <button id="themeButton" onclick="changeTheme()">Změnit téma</button>
+    <button id="saveTextButton" onclick="saveTextToFile()">Uložit text</button>
+    <button id="saveExcelButton" onclick="saveNumbersToExcel()">Uložit čísla do Excel</button>
+
+    <input type="file" id="fileInput" onchange="loadFile(event)" />
+
+    <div id="navodIcon" onclick="toggleNavod()">ℹ️</div>
+    <div id="navodContainer">
+        <h3>Návod</h3>
+        <p><strong>1. Hlasová transkripce</strong><br>Převádí mluvené slovo na text v reálném čase pomocí Web Speech API.<br>Podporuje češtinu (cs-CZ).<br>Automaticky detekuje čísla v textu.</p>
+        <p><strong>2. Zpracování čísel</strong><br>Rozpoznaná čísla se zobrazují ve speciální sekci.<br>Uživatel může čísla ručně upravovat přímo v políčkách.</p>
+        <p><strong>3. Tematické režimy</strong><br>Možnost přepínání mezi třemi režimy zobrazení:<br>Světlý režim (default).<br>Tmavý režim.<br>Modrý režim.</p>
+        <p><strong>4. Ukládání dat</strong><br>Možnost uložit kompletní transkripci do textového souboru (transcription.txt).<br>Možnost exportovat detekovaná čísla do souboru Excel (numbers.xlsx).</p>
+        <p><strong>5. Načítání textového souboru</strong><br>Funkce pro načtení textu ze souboru a jeho zobrazení.<br>Automatická detekce čísel v načteném textu.</p>
+        <p><strong>6. Dynamické zpracování textu</strong><br>Transkripce zahrnuje převod číslovek na číslice (např. „jedna" na „1").<br>Podpora desetinných čísel s tečkou místo čárky.</p>
+        <p><strong>7. Přizpůsobení rozhraní</strong><br>Upozornění: V případě jakékoliv nutnosti editace tzn. čísla nebo textu je nutné zastavit nahrávání a data uložit a případně pokračovat.</p>
+    </div>
+
+    <script src="script.js"></script> <!-- Odkaz na externí JavaScript -->
+<footer style="text-align:center; font-size: 0.8em; color: #888; padding: 1em 0;">
+  Součást ekosystému <strong>NeoStudio Analytics</strong> – © 2025
+</footer> 
+</body>
+</html>
