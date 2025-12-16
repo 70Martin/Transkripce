@@ -2,6 +2,13 @@
 # FocusPS – Převod řeči na text a detekce čísel
 
 Tato webová aplikace využívá Web Speech API pro online převod hlasu na text a detekci čísel. Je navržena pro jednoduché použití v češtině a podporuje export textu i čísel.
+Public PWA
+- Source: GitHub (branch: main)
+- Runtime: Netlify
+- Purpose: Public PWA
+- Deployment method: Netlify CI/CD from `main`
+- Domain: https://focusps.netlify.app
+
 
 ## ✅ Novinky a vylepšení (SEO optimalizace)
 
